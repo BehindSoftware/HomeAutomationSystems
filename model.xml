@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="HomeAutomationSystems">
+			<graphics key="collapsed" value="false"/>
+			<or mandatory="true" name="Sensors">
+				<graphics key="collapsed" value="false"/>
+				<and abstract="true" name="EnergyEfficiencyDetector">
+					<feature name="Presence"/>
+				</and>
+				<or abstract="true" name="SecurityDetector">
+					<feature name="GlassBreak"/>
+					<feature name="DoorOpen"/>
+				</or>
+				<or abstract="true" name="SafetyDetector">
+					<feature name="Smoke"/>
+					<feature name="Water"/>
+				</or>
+				<or abstract="true" name="ComfortDetector">
+					<feature name="Sunset"/>
+					<feature name="Temperature"/>
+				</or>
+			</or>
+			<or abstract="true" name="Actuators">
+				<feature name="LightController"/>
+				<feature name="ShutterController"/>
+				<alt abstract="true" name="Alarm">
+					<feature name="SirenController"/>
+					<feature name="MobilePhoneNotifier"/>
+					<feature name="EmergencyCaller"/>
+				</alt>
+				<feature name="TemperatureController"/>
+			</or>
+			<or abstract="true" name="Devices">
+				<feature name="Light"/>
+				<feature name="Siren"/>
+				<feature name="WallPanel"/>
+				<feature name="MobilePhone"/>
+			</or>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Presence</var>
+				<var>LightController</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>LightController</var>
+				<var>Light</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>GlassBreak</var>
+				<var>EmergencyCaller</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>EmergencyCaller</var>
+				<var>WallPanel</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>DoorOpen</var>
+				<var>MobilePhoneNotifier</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>MobilePhoneNotifier</var>
+				<var>MobilePhone</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Smoke</var>
+				<var>EmergencyCaller</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Water</var>
+				<var>EmergencyCaller</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Sunset</var>
+				<var>ShutterController</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>ShutterController</var>
+				<var>WallPanel</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Temperature</var>
+				<var>TemperatureController</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>TemperatureController</var>
+				<var>WallPanel</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>LightController</var>
+				<var>Presence</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Light</var>
+				<var>LightController</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>MobilePhoneNotifier</var>
+				<var>DoorOpen</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>MobilePhone</var>
+				<var>MobilePhoneNotifier</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>ShutterController</var>
+				<var>Sunset</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>TemperatureController</var>
+				<var>Temperature</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

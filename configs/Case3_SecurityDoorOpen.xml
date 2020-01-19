@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="HomeAutomationSystems"/>
+	<feature automatic="selected" name="Sensors"/>
+	<feature name="EnergyEfficiencyDetector"/>
+	<feature name="Presence"/>
+	<feature automatic="selected" name="SecurityDetector"/>
+	<feature automatic="unselected" name="GlassBreak"/>
+	<feature manual="selected" name="DoorOpen"/>
+	<feature automatic="unselected" name="SafetyDetector"/>
+	<feature automatic="unselected" name="Smoke"/>
+	<feature automatic="unselected" name="Water"/>
+	<feature name="ComfortDetector"/>
+	<feature name="Sunset"/>
+	<feature name="Temperature"/>
+	<feature automatic="selected" name="Actuators"/>
+	<feature name="LightController"/>
+	<feature name="ShutterController"/>
+	<feature automatic="selected" name="Alarm"/>
+	<feature automatic="unselected" name="SirenController"/>
+	<feature automatic="selected" name="MobilePhoneNotifier"/>
+	<feature automatic="unselected" name="EmergencyCaller"/>
+	<feature name="TemperatureController"/>
+	<feature automatic="selected" name="Devices"/>
+	<feature name="Light"/>
+	<feature name="Siren"/>
+	<feature name="WallPanel"/>
+	<feature automatic="selected" name="MobilePhone"/>
+</configuration>

@@ -1,0 +1,32 @@
+{
+    "Presence":{
+         "duration_onState":"1000",
+         "duration_offState":"1000"
+    },
+    "GlassBreak":{
+         "duration_onState":"10000",
+         "duration_offState":"2000"
+    },
+    "DoorOpen":{
+         "duration_onState":"10000",
+         "duration_offState":"2000"
+    },
+    "Smoke":{
+         "duration_onState":"10000",
+         "duration_offState":"2000"
+    },
+    "Water":{
+         "duration_onState":"10000",
+         "duration_offState":"2000"
+    },
+    "Sunset":{
+         "duration_onState":"10000",
+         "duration_offState":"2000"
+    },
+    "Temperature":{
+         "duration_onState":"10000",
+         "duration_offState":"2000",
+         "value":"22"
+    }
+
+}
